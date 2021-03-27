@@ -11,4 +11,4 @@ cd dmr-tools
 
 Then you can edit the configuration in the `config/` folder to suit your needs.
 
-Finally you can start everything by using `docker-compose up`
+Finally you can start everything by using `make build && make start`. You can start it in the background using `make daemon`.
