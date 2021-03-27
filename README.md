@@ -1,6 +1,9 @@
 # dmr-tools
 Set of tools to play with DMR.
 
+## Setup diagram
+![DMR Diagram](https://i.ibb.co/k6s1Zs2/DMR-Architecture.png)
+
 ## Getting started
 
 First, clone the repo and its submodules.
