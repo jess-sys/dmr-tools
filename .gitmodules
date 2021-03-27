@@ -1,0 +1,12 @@
+[submodule "MMDVMHost"]
+	path = MMDVMHost
+	url = git@github.com:Neutheria-Group/MMDVMHost.git
+[submodule "MMDVMBridge"]
+	path = MMDVMBridge
+	url = git@github.com:Neutheria-Group/MMDVM_Bridge.git
+[submodule "AnalogBridge"]
+	path = AnalogBridge
+	url = git@github.com:Neutheria-Group/Analog_Bridge.git
+[submodule "HBLink"]
+	path = HBLink
+	url = git@github.com:Neutheria-Group/hblink3.git
