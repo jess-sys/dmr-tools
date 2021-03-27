@@ -1,19 +1,21 @@
-.PHONY: help build start daemon stop destroy 
+.PHONY: help re build start daemon stop destroy 
 
+re: 
+	docker-compose -f docker-compose.yaml build --force-rm --no-cache
 build:
 	cp config/Analog_Bridge.ini AnalogBridge/
 	cp config/MMDVM_Bridge.ini MMDVMBridge/
-	cp config/MMDVM.ini MMDMVMHost/
+	cp config/MMDVM.ini MMDVMHost/
 	cp config/hblink.cfg HBLink/
 	cp config/rules.py HBLink/
-	docker-compose -f docker-compose.yml build 
+	docker-compose -f docker-compose.yaml build 
 logs:
-	docker-compose -f docker-compose.yml logs --tail=100
+	docker-compose -f docker-compose.yaml logs --tail=100
 start:
-	docker-compose -f docker-compose.yml up
+	docker-compose -f docker-compose.yaml up
 daemon:
-	docker-compose -f docker-compose.yml up -d
+	docker-compose -f docker-compose.yaml up -d
 stop:
-	docker-compose -f docker-compose.yml down
+	docker-compose -f docker-compose.yaml down
 destroy:
-	docker-compose -f docker-compose.yml rm 
+	docker-compose -f docker-compose.yaml rm 

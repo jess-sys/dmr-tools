@@ -4,3 +4,16 @@ services:
   mmdvm_host:
     build: ./MMDVMHost
     restart: always
+    volumes:
+      - mmdvmhost:/MMDVMHost
+    devices:
+      - dev/ttyAMA0:/dev/ttyAMA0
+  analog_bridge:
+    build: ./AnalogBridge
+    restart: always
+    ports:
+      - 34001:34001
+      - 32001:32001
+
+volumes:
+  mmdvmhost:
