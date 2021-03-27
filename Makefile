@@ -7,6 +7,8 @@ build:
 	cp config/hblink.cfg HBLink/
 	cp config/rules.py HBLink/
 	docker-compose -f docker-compose.yml build 
+logs:
+	docker-compose -f docker-compose.yml logs --tail=100
 start:
 	docker-compose -f docker-compose.yml up
 daemon:
