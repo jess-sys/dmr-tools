@@ -33,32 +33,16 @@ configuration file.
 '''
 
 BRIDGES = {
-    'WORLDWIDE': [
-            {'SYSTEM': 'MASTER-1',    'TS': 1, 'TGID': 1,    'ACTIVE': True, 'TIMEOUT': 2, 'TO_TYPE': 'ON',  'ON': [2,], 'OFF': [9,10], 'RESET': []},
-            {'SYSTEM': 'CLIENT-1',    'TS': 1, 'TGID': 3100, 'ACTIVE': True, 'TIMEOUT': 2, 'TO_TYPE': 'ON',  'ON': [2,], 'OFF': [9,10], 'RESET': []},
+    'TG337': [
+            {'SYSTEM': 'MASTER',    'TS': 2, 'TGID': 337,   'ACTIVE': True, 'TIMEOUT': 10, 'TO_TYPE': 'NONE', 'ON': [], 'OFF': [], 'RESET': []},
+            {'SYSTEM': 'CLIENTS',    'TS': 2, 'TGID': 337,   'ACTIVE': True, 'TIMEOUT': 10, 'TO_TYPE': 'NONE', 'ON': [], 'OFF': [], 'RESET': []},
         ],
-    'ENGLISH': [
-            {'SYSTEM': 'MASTER-1',    'TS': 1, 'TGID': 13,   'ACTIVE': True, 'TIMEOUT': 2, 'TO_TYPE': 'NONE', 'ON': [3,], 'OFF': [8,10], 'RESET': []},
-            {'SYSTEM': 'CLIENT-2',    'TS': 1, 'TGID': 13,   'ACTIVE': True, 'TIMEOUT': 2, 'TO_TYPE': 'NONE', 'ON': [3,], 'OFF': [8,10], 'RESET': []},
-        ],
-    'STATEWIDE': [
-            {'SYSTEM': 'MASTER-1',    'TS': 2, 'TGID': 3129, 'ACTIVE': True, 'TIMEOUT': 2, 'TO_TYPE': 'NONE', 'ON': [4,], 'OFF': [7,10], 'RESET': []},
-            {'SYSTEM': 'CLIENT-2',    'TS': 2, 'TGID': 3129, 'ACTIVE': True, 'TIMEOUT': 2, 'TO_TYPE': 'NONE', 'ON': [4,], 'OFF': [7,10], 'RESET': []},
+    'TG7': [
+            {'SYSTEM': 'MASTER',    'TS': 2, 'TGID': 7,   'ACTIVE': True, 'TIMEOUT': 10, 'TO_TYPE': 'NONE', 'ON': [], 'OFF': [], 'RESET': []},
+            {'SYSTEM': 'CLIENTS',    'TS': 2, 'TGID': 7,   'ACTIVE': True, 'TIMEOUT': 10, 'TO_TYPE': 'NONE', 'ON': [], 'OFF': [], 'RESET': []},
         ]
 }
-
-'''
-list the names of each system that should bridge unit to unit (individual) calls.
-'''
-
-UNIT = ['ONE', 'TWO']
-
-'''
-This is for testing the syntax of the file. It won't eliminate all errors, but running this file
-like it were a Python program itself will tell you if the syntax is correct!
-'''
 
 if __name__ == '__main__':
     from pprint import pprint
     pprint(BRIDGES)
-    print(UNIT)
